@@ -45,3 +45,40 @@ nav ul li a:hover {
 }
 
 /*END OF Navigation*/
+
+section:after { /* clear propety to avoid problems with floats */
+    content: " ";
+    display: block;
+    clear:both
+}
+
+section div.container img { /*style with images*/
+    width: 33.33%; /*100%3, if 3 images per row*/
+    float: left;
+    opacity: 1;
+    box-sizing:border-box; /*to maintain the widht as 100%*/
+    border: 1px solid transparent;
+    transition: opacity .5s;
+}
+
+section div.container img:hover {
+    opacity: .7
+}
+
+section {
+    margin-bottom: 3%;
+}
+
+section h2 {
+    text-align: center;
+}
+
+footer {
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+footer p {
+    font-weight: bold;
+}
