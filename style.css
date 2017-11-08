@@ -84,10 +84,78 @@ footer p {
 }
 
 
-/*test (media queries)*/
+/*RESPONSIVE*/
 
-@media only screen and (max-width: 768px) and (min-width:480px) {
-    body {
-        background: red;
+@media only screen and (max-width: 768px) {
+    .wrapper { /*phone mode*/
+        width: 100%;
+        background: red; /*can be use to debugging*/
+    }
+    
+    header h1 {
+        margin-left: 5%;
+    }
+    
+    #menu-icon {
+        width: 30px;
+        height: 26px;
+        background: url(images/menu.png) no-repeat center;
+        position: absolute;
+        top: 2%;
+        right: 5%;
+        z-index: 100;
+    }
+    
+    nav ul {
+        position:absolute;
+        top: 0%;
+        right: 5%;
+        padding: 3% 7%;
+        background: #eee;
+        width: 200px;
+        padding: 3% 7%;
+        text-align: center;
+        z-index: 10;
+        display: none;
+    }
+    
+    nav ul li {
+        width: 90%;
+        padding: 5%;
+        margin: auto;
+    }
+    
+    nav ul li a {
+        padding: 5% 20%;
+    }
+    
+    nav ul li a:hover {
+        border-bottom: 1px solid #aaa;
+    }
+    
+    nav:hover ul {
+        display: block;
+    }
+    
+    section div.container img {
+        display: block;
+        float: none;
+        width:100%;
+        height: auto
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) { /*tablet mode*/
+    .wrapper {
+        width:100%;
+        background: green;
+    }
+    
+    header h1 {
+        margin-left: 40px;
+    }
+    
+    nav { 
+        margin-right: 15px;
     }
 }
